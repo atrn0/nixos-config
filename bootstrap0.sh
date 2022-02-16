@@ -17,6 +17,5 @@ mkdir -p /mnt/boot
 mount /dev/disk/by-label/boot /mnt/boot
 swapon /dev/${NIXBLOCKDEVICE}p2
 nixos-generate-config --root /mnt
-curl --location --output /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/atrn0/nixos-config/main/configuration.nix
-nixos-install --no-root-passwd
+nixos-install
 reboot
